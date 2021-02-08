@@ -112,10 +112,11 @@ fn add_accelerators(application: &gtk::Application) {
 fn build_ui(application: &gtk::Application) {
     let window = gtk::ApplicationWindow::new(application);
 
-    window.set_title("System menu bar");
+    window.set_title("System Menu Bar");
     window.set_border_width(10);
     window.set_position(gtk::WindowPosition::Center);
     window.set_default_size(350, 70);
+    window.set_icon_from_file("Gamma.png");
 
     let v_box = gtk::Box::new(gtk::Orientation::Vertical, 10);
     let label = gtk::Label::new(Some("Nothing happened yet"));
@@ -134,7 +135,7 @@ fn build_ui(application: &gtk::Application) {
 
 fn main() {
     let application = gtk::Application::new(
-        Some("com.github.rustedterrier.gtk-test"),
+        Some("com.github.rustedterrier.gtk-thing"),
         Default::default(),
     )
     .expect("Initialization failed...");
