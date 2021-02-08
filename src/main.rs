@@ -112,7 +112,7 @@ fn add_accelerators(application: &gtk::Application) {
 fn build_ui(application: &gtk::Application) {
     let window = gtk::ApplicationWindow::new(application);
 
-    window.set_title("System Menu Bar");
+    window.set_title("Gamma");
     window.set_border_width(10);
     window.set_position(gtk::WindowPosition::Center);
     window.set_default_size(350, 70);
@@ -135,7 +135,7 @@ fn build_ui(application: &gtk::Application) {
 
 fn main() {
     let application = gtk::Application::new(
-        Some("com.github.rustedterrier.gtk-thing"),
+        Some("com.github.rustedterrier.gtk-test"),
         Default::default(),
     )
     .expect("Initialization failed...");
